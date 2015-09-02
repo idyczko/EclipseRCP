@@ -1,0 +1,10 @@
+1441089572365	Delete element
+1441089899501	Delete element
+1441090971083	Delete element
+1441179681088	Rename local variable 'delete'
+1441186779894	Rename local variable 'dataLastName'
+1441189038466	Extract method 'initializeButtons'
+1441193344154	Rename local variable 'tableViewerColumn'
+1441193356574	Rename local variable 'tblclmnNewColumn'
+1441194579639	Extract method 'createColumns'
+1441195209849	Extract method 'initializeButtons'

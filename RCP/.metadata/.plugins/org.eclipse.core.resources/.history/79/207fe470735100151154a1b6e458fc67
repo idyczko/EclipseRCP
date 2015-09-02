@@ -1,0 +1,26 @@
+package com.starterkit.scheduler;
+
+import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.jface.dialogs.TitleAreaDialog;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+public class ModifyTaskDialog extends TitleAreaDialog {
+	private WritableList list;
+
+	private Text priorityText;
+	private Text placeText;
+	private Text descriptionText;
+	private Text headerText;
+
+	private Long priority;
+	private String place;
+	private String description;
+	private String header;
+
+	public ModifyTaskDialog(Shell shell, WritableList todayTasks, Task task) {
+		super(parentShell);
+		this.list = list;
+	}
+
+}

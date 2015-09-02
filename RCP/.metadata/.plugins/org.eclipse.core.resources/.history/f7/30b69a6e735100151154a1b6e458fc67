@@ -1,0 +1,7 @@
+package com.starterkit.scheduler;
+
+import org.eclipse.jface.dialogs.TitleAreaDialog;
+
+public class ModifyTaskDialog extends TitleAreaDialog {
+
+}

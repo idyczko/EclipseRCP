@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.part.MessagePage"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.dialogs.MessageDialog"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Observable"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.databinding.viewers.ObservableListContentProvider"/>
+<fullyQualifiedTypeName name="java.awt.Button"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
+<fullyQualifiedTypeName name="com.starterkit.scheduler.Tomorrow"/>
+<fullyQualifiedTypeName name="java.awt.Dialog"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.dialogs.Dialog"/>
+<fullyQualifiedTypeName name="java.util.ResourceBundle.Control"/>
+<fullyQualifiedTypeName name="java.awt.GridLayout"/>
+<fullyQualifiedTypeName name="java.awt.Composite"/>
+<fullyQualifiedTypeName name="java.awt.Label"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Composite"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Label"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.layout.GridLayout"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Control"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.MessageBox"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.dialogs.TitleAreaDialog"/>
+<fullyQualifiedTypeName name="com.starterkit.scheduler.AddTaskDialog"/>
+<fullyQualifiedTypeName name="com.starterkit.scheduler.DataModel"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.ColumnLabelProvider"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.eclipse.core.databinding.observable.list.WritableList"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.Viewer"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.ViewerComparator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.starterkit.scheduler.ModelObject"/>
+<fullyQualifiedTypeName name="org.eclipse.core.databinding.observable.value.WritableValue"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.databinding.viewers.ViewerSupport"/>
+<fullyQualifiedTypeName name="org.eclipse.core.databinding.beans.BeanProperties"/>
+<fullyQualifiedTypeName name="org.eclipse.osgi.framework.util.Headers"/>
+<fullyQualifiedTypeName name="org.eclipse.core.databinding.property.Properties"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,29 @@
+package com.starterkit.scheduler;
+
+import java.text.DateFormat;
+
+public class Task {
+	private Long priority;
+	private DateFormat startTime;
+	private DateFormat endTime;
+
+	private String header;
+	private String description;
+	private String place;
+
+	public Task(Long priority, DateFormat startTime, DateFormat endTime,
+			String header, String description, String place) {
+		super();
+		this.priority = priority;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.header = header;
+		this.description = description;
+		this.place = place;
+	}
+	
+	public String toString(){
+		return header;
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.starterkit.scheduler;
+
+import java.text.DateFormat;
+
+public class Task {
+	private Long priority;
+	private DateFormat startTime;
+	private DateFormat endTime;
+	
+	private String header;
+	private String description;
+	private String place;
+
+}

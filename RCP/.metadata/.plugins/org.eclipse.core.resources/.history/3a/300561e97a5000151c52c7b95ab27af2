@@ -1,0 +1,19 @@
+package com.starterkit.scheduler;
+
+import org.eclipse.ui.IPageLayout;
+import org.eclipse.ui.IPerspectiveFactory;
+
+public class SchedulerPerspective implements IPerspectiveFactory {
+
+	@Override
+	public void createInitialLayout(IPageLayout layout) {
+		  String editorArea = layout.getEditorArea();
+		  layout.setEditorAreaVisible(false);
+
+		layout.addView(Today.ID,  IPageLayout.TOP, (float) 0.25,editorArea);
+		layout.addView(Tomorrow.ID, IPageLayout.RIGHT, (float) 0.25,Today.ID);
+		layout.addView(Calendar.ID, IPageLayout.RIGHT, (float) 0.25,Calendar.ID);
+		layout.addView(Archive.ID, IPageLayout.RIGHT, (float) 0.25,Archive.ID);
+	}
+
+}

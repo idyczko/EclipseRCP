@@ -1,0 +1,22 @@
+package com.starterkit.scheduler;
+
+import java.util.ArrayList;
+
+import org.eclipse.core.databinding.observable.list.WritableList;
+
+public class DataModel {
+	private static DataModel instance = null;
+
+	protected DataModel() {
+	}
+
+	public static DataModel getInstance() {
+		if (instance == null) {
+			instance = new DataModel();
+		}
+		return instance;
+	}
+
+	private WritableList todayTasks = new WritableList(new ArrayList<Task>(),
+			Task.class);
+}

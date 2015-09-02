@@ -1,0 +1,104 @@
+package com.starterkit.scheduler;
+
+import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITableLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.part.ViewPart;
+
+import com.starterkit.scheduler.Today.ViewLabelProvider;
+
+public class Archive extends ViewPart {
+	public static final String ID = "com.starterkit.scheduler.archiveview";
+
+	private TableViewer viewer;
+	private Task selectedTask;
+	private WritableList tasks;
+	private WritableList tomorrowTasks = ((Tomorrow) 
+			Application.getView(PlatformUI.getWorkbench().getActiveWorkbenchWindow(),  Tomorrow.ID)).getTasks();
+
+	private WritableList archivedTasks = ((Today) 
+			Application.getView(PlatformUI.getWorkbench().getActiveWorkbenchWindow(),  Today.ID)).getTasks();
+
+	public WritableList getTasks() {
+		return tasks;
+	}
+
+	public Archive() {
+
+	}
+
+	class ViewLabelProvider extends LabelProvider implements
+			ITableLabelProvider {
+		public String getColumnText(Object obj, int index) {
+			return getText(obj);
+		}
+
+		public Image getColumnImage(Object obj, int index) {
+			return getImage(obj);
+		}
+
+		public Image getImage(Object obj) {
+			return PlatformUI.getWorkbench().getSharedImages()
+					.getImage(ISharedImages.IMG_OBJ_ELEMENT);
+		}
+	}
+
+	@Override
+	public void createPartControl(Composite parent) {
+		viewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL
+				| SWT.V_SCROLL);
+		viewer.setContentProvider(new ObservableListContentProvider());
+		viewer.setLabelProvider(new ViewLabelProvider());
+		viewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				IStructuredSelection selection = (IStructuredSelection) viewer
+						.getSelection();
+				Object firstElement = selection.getFirstElement();
+				selectedTask = (Task) firstElement;
+			}
+		});
+		Task task = new Task(null, null, null, "dasdasda", "dasdasda",
+				"dasdasda");
+		tasks.add(task);
+		tasks.add(task);
+		tasks.add(task);
+
+		viewer.setInput(tasks);
+
+		Button delete = new Button(parent, SWT.PUSH);
+		delete.setText("Archive");
+		delete.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				archiveTask(selectedTask);
+			}
+
+			private void archiveTask(Task task) {
+				tasks.remove(task);
+				archivedTasks.add(task);
+			}
+
+		});
+
+	}
+
+	@Override
+	public void setFocus() {
+
+	}
+
+}

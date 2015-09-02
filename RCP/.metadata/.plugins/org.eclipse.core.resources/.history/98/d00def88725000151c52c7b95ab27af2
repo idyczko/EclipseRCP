@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: View
+Bundle-SymbolicName: com.starterkit.rcp.view;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.starterkit.rcp.view.Activator
+Bundle-Vendor: STARTERKIT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.starterkit.scheduler;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

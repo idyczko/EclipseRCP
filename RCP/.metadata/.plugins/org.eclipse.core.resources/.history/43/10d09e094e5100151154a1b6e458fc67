@@ -1,0 +1,14 @@
+package com.starterkit.scheduler;
+
+public class DataModel {
+	 private static DataModel instance = null;
+	   protected DataModel() {
+	      // Exists only to defeat instantiation.
+	   }
+	   public static DataModel getInstance() {
+	      if(instance == null) {
+	         instance = new DataModel();
+	      }
+	      return instance;
+	   }
+}

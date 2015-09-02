@@ -1,0 +1,55 @@
+package com.starterkit.scheduler;
+
+
+public class Task implements Comparable<Task> {
+	private Long priority;
+
+
+	private String place;
+	private String header;
+	private String description;
+
+	public Task(Long priority, String place, String header, String description) {
+		this.priority = priority;
+		this.header = header;
+		this.description = description;
+		this.place = place;
+	}
+
+	public Long getPriority() {
+		return priority;
+	}
+
+	public String getHeader() {
+		return header;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getPlace() {
+		return place;
+	}
+
+	public void setPriority(Long priority) {
+		this.priority = priority;
+	}
+	
+	public void setPlace(String place) {
+		this.place = place;
+	}
+	
+	public void setHeader(String header) {
+		this.header = header;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	@Override
+	public int compareTo(Task arg0) {
+		return priority.intValue() - arg0.getPriority().intValue();
+	}
+
+}
